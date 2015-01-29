@@ -1,0 +1,23 @@
+{
+  "name": "kirkburton-cricket-club",
+  "description": "Kirkburton Cricket Club",
+  "version": "0.1.0",
+  "contributors": {
+    "name": "Joseph Walker",
+    "email": "joseph@josephwalker.co.uk"
+  },
+  "homepage": "http://kirkburtoncc.co.uk",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-csso": "*",
+    "matchdep": "*"
+  }
+}
