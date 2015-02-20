@@ -4,6 +4,9 @@
  *
  * github.com/inuitcss | inuitcss.com
  */
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -425,6 +428,48 @@ html {
 }
 
 /*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+/**
+ * As well as using normalize.css, it is often advantageous to remove all
+ * margins from certain elements.
+ */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u,
+ins {
+  text-decoration: none;
+}
+
+/**
+ * Apply faux underlines to inserted text via `border-bottom`.
+ */
+ins {
+  border-bottom: 1px solid;
+}
+
+/*------------------------------------*\
     #PAGE
 \*------------------------------------*/
 /**
@@ -446,7 +491,7 @@ html {
   /* [1] */
   line-height: 1.5;
   /* [1] */
-  background-color: #fff;
+  background-color: #88221E;
   color: #333;
   overflow-y: scroll;
   /* [2] */
@@ -460,6 +505,1257 @@ html {
   /* [5] */
   -webkit-font-smoothing: antialiased;
   /* [5] */
+}
+
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+html {
+  font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fff;
+  border-bottom: 4px solid #BC9840;
+}
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/**
+ * Headings 1–6, with corresponding Greek-alphabet abstract classes for double-
+ * stranded heading hierarchy: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ */
+h1,
+.alpha {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333;
+}
+
+h2,
+.beta {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6;
+}
+
+h3,
+.gamma {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+h4,
+.delta {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+h5,
+.epsilon {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h6,
+.zeta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+
+/*------------------------------------*\
+    #IMAGES
+\*------------------------------------*/
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */
+}
+
+/**
+ * 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
+ *    to remove the effects.
+ * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
+ *    not make the image fluid.
+ */
+.gm-style img,
+img[width],
+img[height] {
+  /* [2] */
+  max-width: none;
+}
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/**
+ * A simple button object.
+ */
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7.
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
+ */
+.btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  font: inherit;
+  /* [3] */
+  text-align: center;
+  /* [4] */
+  border: none;
+  /* [4] */
+  margin: 0;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  overflow: visible;
+  /* [6] */
+  padding: 11px 23px;
+  /* [7] */
+  background-color: #4a8ec2;
+  border: 1px solid #4a8ec2;
+}
+.btn, .btn:hover, .btn:active, .btn:focus {
+  text-decoration: none;
+  /* [4] */
+  color: #fff;
+}
+
+/**
+ * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+ */
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+ * The inuitcss layout system uses `box-sizing: border-box;` and
+ * `display: inline-block;` to create an extremely powerful, flexible
+ * alternative to the traditional grid system. Combine the layout items with
+ * the widths found in `trumps.widths`.
+ */
+/**
+ * Begin a layout group.
+ */
+.layout {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -24px;
+}
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+.layout__item {
+  display: inline-block;
+  /* [1] */
+  padding-left: 24px;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+}
+
+/*------------------------------------*\
+    #SPACING
+\*------------------------------------*/
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+/*------------------------------------*\
+    #SPACING-RESPONSIVE
+\*------------------------------------*/
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+/**
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes can take a fraction-like format (e.g. `.2/3`) or a spoken-
+ * word format (e.g. `two-thirds`). Toggle formats by overriding the
+ * `$inuit-use-fractions` variable defined below.
+ */
+/**
+ * Whole.
+ */
+[class~="1/1"] {
+  width: 100% !important;
+}
+
+/**
+ * Halves.
+ */
+[class~="1/2"],
+[class~="2/4"],
+[class~="3/6"],
+[class~="4/8"],
+[class~="5/10"],
+[class~="6/12"] {
+  width: 50% !important;
+}
+
+/**
+ * Thirds.
+ */
+[class~="1/3"],
+[class~="2/6"],
+[class~="3/9"],
+[class~="4/12"] {
+  width: 33.3333333% !important;
+}
+
+[class~="2/3"],
+[class~="4/6"],
+[class~="6/9"],
+[class~="8/12"] {
+  width: 66.6666666% !important;
+}
+
+/**
+ * Quarters.
+ */
+[class~="1/4"],
+[class~="2/8"],
+[class~="3/12"] {
+  width: 25% !important;
+}
+
+[class~="3/4"],
+[class~="6/8"],
+[class~="9/12"] {
+  width: 75% !important;
+}
+
+/**
+ * Fifths.
+ */
+[class~="1/5"],
+[class~="2/10"] {
+  width: 20% !important;
+}
+
+[class~="2/5"],
+[class~="4/10"] {
+  width: 40% !important;
+}
+
+[class~="3/5"],
+[class~="6/10"] {
+  width: 60% !important;
+}
+
+[class~="4/5"],
+[class~="8/10"] {
+  width: 80% !important;
+}
+
+/**
+ * Sixths.
+ */
+[class~="1/6"],
+[class~="2/12"] {
+  width: 16.6666666% !important;
+}
+
+[class~="5/6"],
+[class~="10/12"] {
+  width: 83.3333333% !important;
+}
+
+/**
+ * Eighths.
+ */
+[class~="1/8"] {
+  width: 12.5% !important;
+}
+
+[class~="3/8"] {
+  width: 37.5% !important;
+}
+
+[class~="5/8"] {
+  width: 62.5% !important;
+}
+
+[class~="7/8"] {
+  width: 87.5% !important;
+}
+
+/**
+ * Ninths.
+ */
+[class~="1/9"] {
+  width: 11.1111111% !important;
+}
+
+[class~="2/9"] {
+  width: 22.2222222% !important;
+}
+
+[class~="4/9"] {
+  width: 44.4444444% !important;
+}
+
+[class~="5/9"] {
+  width: 55.5555555% !important;
+}
+
+[class~="7/9"] {
+  width: 77.7777777% !important;
+}
+
+[class~="8/9"] {
+  width: 88.8888888% !important;
+}
+
+/**
+ * Tenths.
+ */
+[class~="1/10"] {
+  width: 10% !important;
+}
+
+[class~="3/10"] {
+  width: 30% !important;
+}
+
+[class~="7/10"] {
+  width: 70% !important;
+}
+
+[class~="9/10"] {
+  width: 90% !important;
+}
+
+/**
+ * Twelfths.
+ */
+[class~="1/12"] {
+  width: 8.3333333% !important;
+}
+
+[class~="5/12"] {
+  width: 41.6666666% !important;
+}
+
+[class~="7/12"] {
+  width: 58.3333333% !important;
+}
+
+[class~="11/12"] {
+  width: 91.6666666% !important;
+}
+
+/*------------------------------------*\
+    #WIDTHS-RESPONSIVE
+\*------------------------------------*/
+/**
+ * Responsive width classes based on your responsive settings.
+ */
+@media screen and (max-width: 719px) {
+  /**
+   * Whole.
+   */
+  [class~="palm-1/1"] {
+    width: 100% !important;
+  }
+
+  /**
+   * Halves.
+   */
+  [class~="palm-1/2"],
+  [class~="palm-2/4"],
+  [class~="palm-3/6"],
+  [class~="palm-4/8"],
+  [class~="palm-5/10"],
+  [class~="palm-6/12"] {
+    width: 50% !important;
+  }
+
+  /**
+   * Thirds.
+   */
+  [class~="palm-1/3"],
+  [class~="palm-2/6"],
+  [class~="palm-3/9"],
+  [class~="palm-4/12"] {
+    width: 33.3333333% !important;
+  }
+
+  [class~="palm-2/3"],
+  [class~="palm-4/6"],
+  [class~="palm-6/9"],
+  [class~="palm-8/12"] {
+    width: 66.6666666% !important;
+  }
+
+  /**
+   * Quarters.
+   */
+  [class~="palm-1/4"],
+  [class~="palm-2/8"],
+  [class~="palm-3/12"] {
+    width: 25% !important;
+  }
+
+  [class~="palm-3/4"],
+  [class~="palm-6/8"],
+  [class~="palm-9/12"] {
+    width: 75% !important;
+  }
+
+  /**
+   * Fifths.
+   */
+  [class~="palm-1/5"],
+  [class~="palm-2/10"] {
+    width: 20% !important;
+  }
+
+  [class~="palm-2/5"],
+  [class~="palm-4/10"] {
+    width: 40% !important;
+  }
+
+  [class~="palm-3/5"],
+  [class~="palm-6/10"] {
+    width: 60% !important;
+  }
+
+  [class~="palm-4/5"],
+  [class~="palm-8/10"] {
+    width: 80% !important;
+  }
+
+  /**
+   * Sixths.
+   */
+  [class~="palm-1/6"],
+  [class~="palm-2/12"] {
+    width: 16.6666666% !important;
+  }
+
+  [class~="palm-5/6"],
+  [class~="palm-10/12"] {
+    width: 83.3333333% !important;
+  }
+
+  /**
+   * Eighths.
+   */
+  [class~="palm-1/8"] {
+    width: 12.5% !important;
+  }
+
+  [class~="palm-3/8"] {
+    width: 37.5% !important;
+  }
+
+  [class~="palm-5/8"] {
+    width: 62.5% !important;
+  }
+
+  [class~="palm-7/8"] {
+    width: 87.5% !important;
+  }
+
+  /**
+   * Ninths.
+   */
+  [class~="palm-1/9"] {
+    width: 11.1111111% !important;
+  }
+
+  [class~="palm-2/9"] {
+    width: 22.2222222% !important;
+  }
+
+  [class~="palm-4/9"] {
+    width: 44.4444444% !important;
+  }
+
+  [class~="palm-5/9"] {
+    width: 55.5555555% !important;
+  }
+
+  [class~="palm-7/9"] {
+    width: 77.7777777% !important;
+  }
+
+  [class~="palm-8/9"] {
+    width: 88.8888888% !important;
+  }
+
+  /**
+   * Tenths.
+   */
+  [class~="palm-1/10"] {
+    width: 10% !important;
+  }
+
+  [class~="palm-3/10"] {
+    width: 30% !important;
+  }
+
+  [class~="palm-7/10"] {
+    width: 70% !important;
+  }
+
+  [class~="palm-9/10"] {
+    width: 90% !important;
+  }
+
+  /**
+   * Twelfths.
+   */
+  [class~="palm-1/12"] {
+    width: 8.3333333% !important;
+  }
+
+  [class~="palm-5/12"] {
+    width: 41.6666666% !important;
+  }
+
+  [class~="palm-7/12"] {
+    width: 58.3333333% !important;
+  }
+
+  [class~="palm-11/12"] {
+    width: 91.6666666% !important;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+  /**
+   * Whole.
+   */
+  [class~="lap-1/1"] {
+    width: 100% !important;
+  }
+
+  /**
+   * Halves.
+   */
+  [class~="lap-1/2"],
+  [class~="lap-2/4"],
+  [class~="lap-3/6"],
+  [class~="lap-4/8"],
+  [class~="lap-5/10"],
+  [class~="lap-6/12"] {
+    width: 50% !important;
+  }
+
+  /**
+   * Thirds.
+   */
+  [class~="lap-1/3"],
+  [class~="lap-2/6"],
+  [class~="lap-3/9"],
+  [class~="lap-4/12"] {
+    width: 33.3333333% !important;
+  }
+
+  [class~="lap-2/3"],
+  [class~="lap-4/6"],
+  [class~="lap-6/9"],
+  [class~="lap-8/12"] {
+    width: 66.6666666% !important;
+  }
+
+  /**
+   * Quarters.
+   */
+  [class~="lap-1/4"],
+  [class~="lap-2/8"],
+  [class~="lap-3/12"] {
+    width: 25% !important;
+  }
+
+  [class~="lap-3/4"],
+  [class~="lap-6/8"],
+  [class~="lap-9/12"] {
+    width: 75% !important;
+  }
+
+  /**
+   * Fifths.
+   */
+  [class~="lap-1/5"],
+  [class~="lap-2/10"] {
+    width: 20% !important;
+  }
+
+  [class~="lap-2/5"],
+  [class~="lap-4/10"] {
+    width: 40% !important;
+  }
+
+  [class~="lap-3/5"],
+  [class~="lap-6/10"] {
+    width: 60% !important;
+  }
+
+  [class~="lap-4/5"],
+  [class~="lap-8/10"] {
+    width: 80% !important;
+  }
+
+  /**
+   * Sixths.
+   */
+  [class~="lap-1/6"],
+  [class~="lap-2/12"] {
+    width: 16.6666666% !important;
+  }
+
+  [class~="lap-5/6"],
+  [class~="lap-10/12"] {
+    width: 83.3333333% !important;
+  }
+
+  /**
+   * Eighths.
+   */
+  [class~="lap-1/8"] {
+    width: 12.5% !important;
+  }
+
+  [class~="lap-3/8"] {
+    width: 37.5% !important;
+  }
+
+  [class~="lap-5/8"] {
+    width: 62.5% !important;
+  }
+
+  [class~="lap-7/8"] {
+    width: 87.5% !important;
+  }
+
+  /**
+   * Ninths.
+   */
+  [class~="lap-1/9"] {
+    width: 11.1111111% !important;
+  }
+
+  [class~="lap-2/9"] {
+    width: 22.2222222% !important;
+  }
+
+  [class~="lap-4/9"] {
+    width: 44.4444444% !important;
+  }
+
+  [class~="lap-5/9"] {
+    width: 55.5555555% !important;
+  }
+
+  [class~="lap-7/9"] {
+    width: 77.7777777% !important;
+  }
+
+  [class~="lap-8/9"] {
+    width: 88.8888888% !important;
+  }
+
+  /**
+   * Tenths.
+   */
+  [class~="lap-1/10"] {
+    width: 10% !important;
+  }
+
+  [class~="lap-3/10"] {
+    width: 30% !important;
+  }
+
+  [class~="lap-7/10"] {
+    width: 70% !important;
+  }
+
+  [class~="lap-9/10"] {
+    width: 90% !important;
+  }
+
+  /**
+   * Twelfths.
+   */
+  [class~="lap-1/12"] {
+    width: 8.3333333% !important;
+  }
+
+  [class~="lap-5/12"] {
+    width: 41.6666666% !important;
+  }
+
+  [class~="lap-7/12"] {
+    width: 58.3333333% !important;
+  }
+
+  [class~="lap-11/12"] {
+    width: 91.6666666% !important;
+  }
+}
+@media screen and (min-width: 720px) {
+  /**
+   * Whole.
+   */
+  [class~="lap-and-up-1/1"] {
+    width: 100% !important;
+  }
+
+  /**
+   * Halves.
+   */
+  [class~="lap-and-up-1/2"],
+  [class~="lap-and-up-2/4"],
+  [class~="lap-and-up-3/6"],
+  [class~="lap-and-up-4/8"],
+  [class~="lap-and-up-5/10"],
+  [class~="lap-and-up-6/12"] {
+    width: 50% !important;
+  }
+
+  /**
+   * Thirds.
+   */
+  [class~="lap-and-up-1/3"],
+  [class~="lap-and-up-2/6"],
+  [class~="lap-and-up-3/9"],
+  [class~="lap-and-up-4/12"] {
+    width: 33.3333333% !important;
+  }
+
+  [class~="lap-and-up-2/3"],
+  [class~="lap-and-up-4/6"],
+  [class~="lap-and-up-6/9"],
+  [class~="lap-and-up-8/12"] {
+    width: 66.6666666% !important;
+  }
+
+  /**
+   * Quarters.
+   */
+  [class~="lap-and-up-1/4"],
+  [class~="lap-and-up-2/8"],
+  [class~="lap-and-up-3/12"] {
+    width: 25% !important;
+  }
+
+  [class~="lap-and-up-3/4"],
+  [class~="lap-and-up-6/8"],
+  [class~="lap-and-up-9/12"] {
+    width: 75% !important;
+  }
+
+  /**
+   * Fifths.
+   */
+  [class~="lap-and-up-1/5"],
+  [class~="lap-and-up-2/10"] {
+    width: 20% !important;
+  }
+
+  [class~="lap-and-up-2/5"],
+  [class~="lap-and-up-4/10"] {
+    width: 40% !important;
+  }
+
+  [class~="lap-and-up-3/5"],
+  [class~="lap-and-up-6/10"] {
+    width: 60% !important;
+  }
+
+  [class~="lap-and-up-4/5"],
+  [class~="lap-and-up-8/10"] {
+    width: 80% !important;
+  }
+
+  /**
+   * Sixths.
+   */
+  [class~="lap-and-up-1/6"],
+  [class~="lap-and-up-2/12"] {
+    width: 16.6666666% !important;
+  }
+
+  [class~="lap-and-up-5/6"],
+  [class~="lap-and-up-10/12"] {
+    width: 83.3333333% !important;
+  }
+
+  /**
+   * Eighths.
+   */
+  [class~="lap-and-up-1/8"] {
+    width: 12.5% !important;
+  }
+
+  [class~="lap-and-up-3/8"] {
+    width: 37.5% !important;
+  }
+
+  [class~="lap-and-up-5/8"] {
+    width: 62.5% !important;
+  }
+
+  [class~="lap-and-up-7/8"] {
+    width: 87.5% !important;
+  }
+
+  /**
+   * Ninths.
+   */
+  [class~="lap-and-up-1/9"] {
+    width: 11.1111111% !important;
+  }
+
+  [class~="lap-and-up-2/9"] {
+    width: 22.2222222% !important;
+  }
+
+  [class~="lap-and-up-4/9"] {
+    width: 44.4444444% !important;
+  }
+
+  [class~="lap-and-up-5/9"] {
+    width: 55.5555555% !important;
+  }
+
+  [class~="lap-and-up-7/9"] {
+    width: 77.7777777% !important;
+  }
+
+  [class~="lap-and-up-8/9"] {
+    width: 88.8888888% !important;
+  }
+
+  /**
+   * Tenths.
+   */
+  [class~="lap-and-up-1/10"] {
+    width: 10% !important;
+  }
+
+  [class~="lap-and-up-3/10"] {
+    width: 30% !important;
+  }
+
+  [class~="lap-and-up-7/10"] {
+    width: 70% !important;
+  }
+
+  [class~="lap-and-up-9/10"] {
+    width: 90% !important;
+  }
+
+  /**
+   * Twelfths.
+   */
+  [class~="lap-and-up-1/12"] {
+    width: 8.3333333% !important;
+  }
+
+  [class~="lap-and-up-5/12"] {
+    width: 41.6666666% !important;
+  }
+
+  [class~="lap-and-up-7/12"] {
+    width: 58.3333333% !important;
+  }
+
+  [class~="lap-and-up-11/12"] {
+    width: 91.6666666% !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /**
+   * Whole.
+   */
+  [class~="portable-1/1"] {
+    width: 100% !important;
+  }
+
+  /**
+   * Halves.
+   */
+  [class~="portable-1/2"],
+  [class~="portable-2/4"],
+  [class~="portable-3/6"],
+  [class~="portable-4/8"],
+  [class~="portable-5/10"],
+  [class~="portable-6/12"] {
+    width: 50% !important;
+  }
+
+  /**
+   * Thirds.
+   */
+  [class~="portable-1/3"],
+  [class~="portable-2/6"],
+  [class~="portable-3/9"],
+  [class~="portable-4/12"] {
+    width: 33.3333333% !important;
+  }
+
+  [class~="portable-2/3"],
+  [class~="portable-4/6"],
+  [class~="portable-6/9"],
+  [class~="portable-8/12"] {
+    width: 66.6666666% !important;
+  }
+
+  /**
+   * Quarters.
+   */
+  [class~="portable-1/4"],
+  [class~="portable-2/8"],
+  [class~="portable-3/12"] {
+    width: 25% !important;
+  }
+
+  [class~="portable-3/4"],
+  [class~="portable-6/8"],
+  [class~="portable-9/12"] {
+    width: 75% !important;
+  }
+
+  /**
+   * Fifths.
+   */
+  [class~="portable-1/5"],
+  [class~="portable-2/10"] {
+    width: 20% !important;
+  }
+
+  [class~="portable-2/5"],
+  [class~="portable-4/10"] {
+    width: 40% !important;
+  }
+
+  [class~="portable-3/5"],
+  [class~="portable-6/10"] {
+    width: 60% !important;
+  }
+
+  [class~="portable-4/5"],
+  [class~="portable-8/10"] {
+    width: 80% !important;
+  }
+
+  /**
+   * Sixths.
+   */
+  [class~="portable-1/6"],
+  [class~="portable-2/12"] {
+    width: 16.6666666% !important;
+  }
+
+  [class~="portable-5/6"],
+  [class~="portable-10/12"] {
+    width: 83.3333333% !important;
+  }
+
+  /**
+   * Eighths.
+   */
+  [class~="portable-1/8"] {
+    width: 12.5% !important;
+  }
+
+  [class~="portable-3/8"] {
+    width: 37.5% !important;
+  }
+
+  [class~="portable-5/8"] {
+    width: 62.5% !important;
+  }
+
+  [class~="portable-7/8"] {
+    width: 87.5% !important;
+  }
+
+  /**
+   * Ninths.
+   */
+  [class~="portable-1/9"] {
+    width: 11.1111111% !important;
+  }
+
+  [class~="portable-2/9"] {
+    width: 22.2222222% !important;
+  }
+
+  [class~="portable-4/9"] {
+    width: 44.4444444% !important;
+  }
+
+  [class~="portable-5/9"] {
+    width: 55.5555555% !important;
+  }
+
+  [class~="portable-7/9"] {
+    width: 77.7777777% !important;
+  }
+
+  [class~="portable-8/9"] {
+    width: 88.8888888% !important;
+  }
+
+  /**
+   * Tenths.
+   */
+  [class~="portable-1/10"] {
+    width: 10% !important;
+  }
+
+  [class~="portable-3/10"] {
+    width: 30% !important;
+  }
+
+  [class~="portable-7/10"] {
+    width: 70% !important;
+  }
+
+  [class~="portable-9/10"] {
+    width: 90% !important;
+  }
+
+  /**
+   * Twelfths.
+   */
+  [class~="portable-1/12"] {
+    width: 8.3333333% !important;
+  }
+
+  [class~="portable-5/12"] {
+    width: 41.6666666% !important;
+  }
+
+  [class~="portable-7/12"] {
+    width: 58.3333333% !important;
+  }
+
+  [class~="portable-11/12"] {
+    width: 91.6666666% !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /**
+   * Whole.
+   */
+  [class~="desk-1/1"] {
+    width: 100% !important;
+  }
+
+  /**
+   * Halves.
+   */
+  [class~="desk-1/2"],
+  [class~="desk-2/4"],
+  [class~="desk-3/6"],
+  [class~="desk-4/8"],
+  [class~="desk-5/10"],
+  [class~="desk-6/12"] {
+    width: 50% !important;
+  }
+
+  /**
+   * Thirds.
+   */
+  [class~="desk-1/3"],
+  [class~="desk-2/6"],
+  [class~="desk-3/9"],
+  [class~="desk-4/12"] {
+    width: 33.3333333% !important;
+  }
+
+  [class~="desk-2/3"],
+  [class~="desk-4/6"],
+  [class~="desk-6/9"],
+  [class~="desk-8/12"] {
+    width: 66.6666666% !important;
+  }
+
+  /**
+   * Quarters.
+   */
+  [class~="desk-1/4"],
+  [class~="desk-2/8"],
+  [class~="desk-3/12"] {
+    width: 25% !important;
+  }
+
+  [class~="desk-3/4"],
+  [class~="desk-6/8"],
+  [class~="desk-9/12"] {
+    width: 75% !important;
+  }
+
+  /**
+   * Fifths.
+   */
+  [class~="desk-1/5"],
+  [class~="desk-2/10"] {
+    width: 20% !important;
+  }
+
+  [class~="desk-2/5"],
+  [class~="desk-4/10"] {
+    width: 40% !important;
+  }
+
+  [class~="desk-3/5"],
+  [class~="desk-6/10"] {
+    width: 60% !important;
+  }
+
+  [class~="desk-4/5"],
+  [class~="desk-8/10"] {
+    width: 80% !important;
+  }
+
+  /**
+   * Sixths.
+   */
+  [class~="desk-1/6"],
+  [class~="desk-2/12"] {
+    width: 16.6666666% !important;
+  }
+
+  [class~="desk-5/6"],
+  [class~="desk-10/12"] {
+    width: 83.3333333% !important;
+  }
+
+  /**
+   * Eighths.
+   */
+  [class~="desk-1/8"] {
+    width: 12.5% !important;
+  }
+
+  [class~="desk-3/8"] {
+    width: 37.5% !important;
+  }
+
+  [class~="desk-5/8"] {
+    width: 62.5% !important;
+  }
+
+  [class~="desk-7/8"] {
+    width: 87.5% !important;
+  }
+
+  /**
+   * Ninths.
+   */
+  [class~="desk-1/9"] {
+    width: 11.1111111% !important;
+  }
+
+  [class~="desk-2/9"] {
+    width: 22.2222222% !important;
+  }
+
+  [class~="desk-4/9"] {
+    width: 44.4444444% !important;
+  }
+
+  [class~="desk-5/9"] {
+    width: 55.5555555% !important;
+  }
+
+  [class~="desk-7/9"] {
+    width: 77.7777777% !important;
+  }
+
+  [class~="desk-8/9"] {
+    width: 88.8888888% !important;
+  }
+
+  /**
+   * Tenths.
+   */
+  [class~="desk-1/10"] {
+    width: 10% !important;
+  }
+
+  [class~="desk-3/10"] {
+    width: 30% !important;
+  }
+
+  [class~="desk-7/10"] {
+    width: 70% !important;
+  }
+
+  [class~="desk-9/10"] {
+    width: 90% !important;
+  }
+
+  /**
+   * Twelfths.
+   */
+  [class~="desk-1/12"] {
+    width: 8.3333333% !important;
+  }
+
+  [class~="desk-5/12"] {
+    width: 41.6666666% !important;
+  }
+
+  [class~="desk-7/12"] {
+    width: 58.3333333% !important;
+  }
+
+  [class~="desk-11/12"] {
+    width: 91.6666666% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

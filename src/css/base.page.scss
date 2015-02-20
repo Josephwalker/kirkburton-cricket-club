@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+html {
+    font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    padding: $inuit-base-spacing-unit;
+    
+    background-color: $white;
+    
+    border-bottom: 4px solid $burton-gold;
+}
