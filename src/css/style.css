@@ -492,7 +492,7 @@ html {
   line-height: 1.5;
   /* [1] */
   background-color: #88221E;
-  color: #333;
+  color: #fff;
   overflow-y: scroll;
   /* [2] */
   min-height: 100%;
@@ -511,15 +511,36 @@ html {
     #PAGE
 \*------------------------------------*/
 html {
-  font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+  height: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
 }
 
 body {
-  max-width: 1200px;
-  margin: 0 auto;
+  height: 100%;
   padding: 24px;
-  background-color: #fff;
-  border-bottom: 4px solid #BC9840;
+  text-align: center;
+}
+
+.background {
+  background-image: url("../img/kirkburtoncc.jpg");
+  background-repeat: none;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.logo {
+  width: 160px;
+  margin-bottom: 12px;
+}
+
+.header {
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.6);
+}
+
+.header__title {
+  font-weight: 300;
 }
 
 /*------------------------------------*\
