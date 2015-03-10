@@ -7,21 +7,25 @@ html {
     
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
+    
+    background-image: url("../img/kirkburtoncc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
 body {
-    height: 100%;
-        
+    min-height: 100%;
+    
+    background-color: rgba($burton-red, 0.8);
+    
     padding: $inuit-base-spacing-unit;
     
     text-align: center;
 }
 
 .background {
-    background-image: url("../img/kirkburtoncc.jpg");
-    background-repeat: none;
-    background-size: cover;
-    background-position: bottom;
+   
 }
 
 .logo {

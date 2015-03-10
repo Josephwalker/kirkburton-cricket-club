@@ -514,20 +514,18 @@ html {
   height: 100%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-}
-
-body {
-  height: 100%;
-  padding: 24px;
-  text-align: center;
-}
-
-.background {
   background-image: url("../img/kirkburtoncc.jpg");
-  background-repeat: none;
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: bottom;
+}
+
+body {
+  min-height: 100%;
+  background-color: rgba(136, 34, 30, 0.8);
+  padding: 24px;
+  text-align: center;
 }
 
 .logo {
@@ -660,8 +658,9 @@ img[height] {
   /* [6] */
   padding: 11px 23px;
   /* [7] */
-  background-color: #4a8ec2;
-  border: 1px solid #4a8ec2;
+  background-color: transpatent;
+  border: 1px solid #fff;
+  border-radius: 4px;
 }
 .btn, .btn:hover, .btn:active, .btn:focus {
   text-decoration: none;
@@ -675,6 +674,13 @@ img[height] {
 .btn::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+.btn {
+  margin: 20px;
 }
 
 /*------------------------------------*\

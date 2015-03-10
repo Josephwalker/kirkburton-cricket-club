@@ -1,18 +1,6 @@
 /*------------------------------------*\
-    #SETTINGS
+    #BUTTONS
 \*------------------------------------*/
-
-// Colour
-$burton-red: #88221E;
-$burton-gold: #BC9840;
-
-$white: #fff;
-
-
-// High-level base settings.
-$inuit-base-text-color: $white;
-$inuit-base-background-color: $burton-red;
-
 
 $inuit-btn-background:      transpatent;
 $inuit-btn-color:           #fff;
@@ -20,3 +8,11 @@ $inuit-btn-border-width:    1px;
 $inuit-btn-border-style:    solid;
 $inuit-btn-border-color:    #fff;
 $inuit-btn-radius:          4px;
+
+
+.btn {
+    margin: 20px;
+}
+
+
+
