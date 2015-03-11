@@ -516,9 +516,10 @@ html {
   font-weight: 300;
   background-image: url("../img/kirkburtoncc.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: bottom;
+  background-position: center center;
 }
 
 body {
@@ -539,6 +540,40 @@ body {
 
 .header__title {
   font-weight: 300;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+input,
+textarea,
+select {
+  color: black;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+}
+
+.ss-q-title {
+  font-size: 18px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.ss-q-help {
+  font-size: 12px;
+  text-align: left;
+  padding-bottom: 6px;
+}
+
+.required-message,
+.error-message,
+.ss-password-warning,
+#progress-container {
+  display: none;
 }
 
 /*------------------------------------*\
@@ -658,7 +693,7 @@ img[height] {
   /* [6] */
   padding: 11px 23px;
   /* [7] */
-  background-color: transpatent;
+  background-color: #88221E;
   border: 1px solid #fff;
   border-radius: 4px;
 }
