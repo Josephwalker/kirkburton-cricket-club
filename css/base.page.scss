@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+html {
+    height: 100%;
+    
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+body {
+    min-height: 100%;    
+    padding: $inuit-base-spacing-unit;
+    
+    text-align: center;
+}
+
+.background {
+    max-width: 1080px;
+    margin: 20px auto;
+    background: $white;
+}
+
+.logo {
+    width: 160px;
+    margin-bottom: $inuit-base-spacing-unit--small;
+}
+
+.header {
+}
+
+.header__title {
+    font-weight: 300;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    margin-top: $inuit-base-spacing-unit;
+}
+
+input,
+textarea,
+select {
+    color: black;
+    width: 100%;
+    margin-bottom: $inuit-base-spacing-unit--small;
+    padding: $inuit-base-spacing-unit--small;
+}
+
+.ss-q-title {
+    font-size: 18px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.ss-q-help {
+    font-size: 12px;
+    text-align: left;
+    padding-bottom: $inuit-base-spacing-unit--small / 2;
+}
+
+.required-message,
+.error-message,
+.ss-password-warning,
+#progress-container{
+    display: none;
+}
